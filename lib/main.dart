@@ -13,18 +13,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Auth Demo',
 
-      // Define the initial route (Sign-In page)
+      // Initial Route
       initialRoute: '/signIn',
 
-      // Define application routes
+      // Routes
       routes: {
-        // Route for Sign-In page
         '/signIn': (context) => signIn.SignInPage(),
-
-        // Route for Sign-Up page
         '/signUp': (context) => signUp.SignUpPage(),
-
-        // Route for Home page (After successful sign-in)
         '/home': (context) => HomePage(),
       },
     );
@@ -50,7 +45,6 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // Navigate back to Sign-In page for testing purposes
                 Navigator.pushNamed(context, '/signIn');
               },
               child: const Text('Sign Out'),
